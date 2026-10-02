@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #141e30, #243b55);
+
+    color: white;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 450px;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+.score span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 25px;
+
+    color: #00d9ff;
+}
+
+#status {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+.board {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: white;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+
+    background: #eeeeee;
+}
+
+.cell.x {
+    color: #ff4081;
+}
+
+.cell.o {
+    color: #2196f3;
+}
+
+#reset {
+    margin-top: 25px;
+
+    padding: 12px 30px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #ff4081;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#reset:hover {
+    transform: scale(1.05);
+
+    background: #e91e63;
+}
+
+
+/* Mobile responsive */
+
+@media (max-width: 500px) {
+
+    .game-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .cell {
+        font-size: 35px;
+    }
+
+}
